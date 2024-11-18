@@ -96,18 +96,3 @@ from .utils import (
             get_file_info,
             create_output_filename
         )
-
-class OCRProcessor:
-            def __init__(self):
-                self.logger = setup_logging()
-
-            def process_document(self, file_path: str) -> dict:
-                validate_file(file_path)
-                file_info = get_file_info(file_path)
-
-
-                # çıkan text temizleme
-                result['text'] = clean_text(result['text'])
-
-                # output dosya ismi yaratma
-                output_file = create_output_filename(file_path)
